@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 455" width="1000" height="455" role="img" aria-label="MTT Consulting">
+  <defs>
+    <linearGradient id="mttbluel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E7BFF"/>
+      <stop offset="1" stop-color="#1741C8"/>
+    </linearGradient>
+    <linearGradient id="mttswooshl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+  <text x="180" y="358"
+        font-family="'Montserrat','Space Grotesk','Inter',-apple-system,sans-serif"
+        font-weight="800" font-size="235" textLength="640" lengthAdjust="spacingAndGlyphs"
+        fill="url(#mttbluel)">MTT</text>
+  <path d="M155,180 Q520,10 940,215 Q545,70 155,180 Z" fill="url(#mttswooshl)"/>
+  <path d="M470,175 Q790,60 962,345 Q780,130 470,175 Z" fill="url(#mttswooshl)"/>
+  <text x="125" y="437"
+        font-family="'Montserrat','Space Grotesk','Inter',-apple-system,sans-serif"
+        font-weight="600" font-size="73" textLength="750" lengthAdjust="spacingAndGlyphs"
+        fill="#0B1F3A">CONSULTING</text>
+</svg>
