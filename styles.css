@@ -46,7 +46,7 @@ header.site{position:sticky;top:0;z-index:90;background:rgba(6,11,24,.78);backdr
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
 /* Dropdown sits flush against the header's bottom edge — no hover gap anywhere */
 .dropdown{position:absolute;top:100%;left:-18px;background:#0b1428;border:1px solid var(--line-2);border-radius:0 0 14px 14px;box-shadow:0 30px 60px rgba(0,0,0,.5);padding:10px;min-width:300px;z-index:99;max-height:calc(100vh - 150px);overflow:auto;opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
-.nav-links li:hover .dropdown,.nav-links li:focus-within .dropdown{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.nav-links li:hover .dropdown,.nav-links li:focus-within .dropdown,.dropdown.force-open{opacity:1;visibility:visible;transform:none;pointer-events:auto}
 /* set by site.js right after a menu item is picked; cleared on mouseleave */
 .dropdown.is-closed{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:none!important}
 .dropdown a{display:block;padding:10px 14px;border-radius:9px;font-size:.9rem}
