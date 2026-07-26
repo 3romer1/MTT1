@@ -11,6 +11,28 @@
   });
 })();
 
+// Dropdown: picking an item (or the Services link itself) closes the menu at once.
+// It stays closed until the pointer leaves the nav item, then hover works again.
+(function () {
+  document.querySelectorAll('.nav-links li').forEach(function (li) {
+    var dd = li.querySelector('.dropdown');
+    if (!dd) return;
+    li.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+      dd.classList.add('is-closed');
+      link.blur();
+      var navLinks = document.querySelector('.nav-links');
+      if (navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        var burger = document.querySelector('.hamburger');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    li.addEventListener('mouseleave', function () { dd.classList.remove('is-closed'); });
+  });
+})();
+
 // Scroll-reveal animations
 (function () {
   var els = document.querySelectorAll('.reveal');
