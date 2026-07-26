@@ -40,13 +40,12 @@ header.site{position:sticky;top:0;z-index:90;background:rgba(6,11,24,.78);backdr
 .logo{display:flex;align-items:center;gap:11px;font-family:var(--font-d);font-weight:800;font-size:1.2rem;color:var(--ink)}
 .logo img{height:44px;width:auto;display:block}
 .logo .mark{width:38px;height:38px;border-radius:10px;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:900}
-.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
-.nav-links>li{position:relative}
+.nav-links{display:flex;align-items:stretch;align-self:stretch;gap:30px;list-style:none}
+.nav-links>li{position:relative;display:flex;align-items:center}
 .nav-links a{color:var(--muted);font-weight:600;font-size:.93rem;transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
-.dropdown{position:absolute;top:calc(100% + 14px);left:-18px;background:#0b1428;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.5);padding:10px;min-width:300px;z-index:99;max-height:calc(100vh - 150px);overflow:auto;opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
-/* invisible bridge so hover isn't lost crossing the gap between the link and the menu */
-.dropdown::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+/* Dropdown sits flush against the header's bottom edge — no hover gap anywhere */
+.dropdown{position:absolute;top:100%;left:-18px;background:#0b1428;border:1px solid var(--line-2);border-radius:0 0 14px 14px;box-shadow:0 30px 60px rgba(0,0,0,.5);padding:10px;min-width:300px;z-index:99;max-height:calc(100vh - 150px);overflow:auto;opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;transition:opacity .18s ease,transform .18s ease,visibility .18s}
 .nav-links li:hover .dropdown,.nav-links li:focus-within .dropdown{opacity:1;visibility:visible;transform:none;pointer-events:auto}
 .dropdown a{display:block;padding:10px 14px;border-radius:9px;font-size:.9rem}
 .dropdown a:hover{background:rgba(255,255,255,.05);color:var(--cyan)}
@@ -284,8 +283,8 @@ footer.site a:hover{color:var(--cyan)}
   .foot-grid{grid-template-columns:1fr 1fr}
   .nav-links{position:fixed;inset:78px 0 auto 0;background:var(--bg-2);flex-direction:column;align-items:flex-start;padding:26px;gap:20px;border-bottom:1px solid var(--line-2);display:none;z-index:80}
   .nav-links.open{display:flex}
+  .nav-links>li{display:block}
   .dropdown{position:static;border:0;box-shadow:none;background:none;padding:8px 0 0 14px;min-width:0;max-height:none;opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:none}
-  .dropdown::before{display:none}
   .hamburger{display:block}
   .nav>.btn{display:none}
 }
